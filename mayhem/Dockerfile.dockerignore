@@ -1,0 +1,7 @@
+# Per-Dockerfile ignore: keep the full tree (incl. .git, models/*.gguf vocab files, tests) in the build context;
+# drop only local build outputs.
+build-fuzz/
+build-tests/
+*.o
+*.a
+**/__pycache__/

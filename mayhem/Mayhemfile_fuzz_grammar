@@ -1,0 +1,9 @@
+project: savantenvs/powerinfer
+target: fuzz_grammar
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_grammar/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_grammar
+    libfuzzer: true
+    timeout: 30

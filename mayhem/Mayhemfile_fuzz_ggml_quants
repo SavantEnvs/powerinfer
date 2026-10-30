@@ -1,0 +1,9 @@
+project: savantenvs/powerinfer
+target: fuzz_ggml_quants
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ggml_quants/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ggml_quants
+    libfuzzer: true
+    timeout: 30

@@ -1,0 +1,9 @@
+project: savantenvs/powerinfer
+target: fuzz_tokenize_spm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tokenize_spm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tokenize_spm
+    libfuzzer: true
+    timeout: 30
